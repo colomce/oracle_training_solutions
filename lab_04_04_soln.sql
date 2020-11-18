@@ -19,7 +19,7 @@ BEGIN
     
     -- RAISE EXCEPTION HERE
     -- INCLUDE SIMPLE IF STATEMENT HERE
-    
+    -- Temporary condition to make it compile
     IF  1 = 1 THEN
      DECLARE
           emp_sal employee_details.salary%TYPE;
@@ -46,6 +46,7 @@ BEGIN
         
         -- INCLUDE EXECUTABLE SECTION OF INNER BLOCK HERE
          BEGIN
+             -- Temporary Output since BEGIN and END should have atleast 1 statement. 
              DBMS_OUTPUT.PUT_LINE ('INNER BLOCK SECTION');
         -- CLOSE THE INNER BLOCK
          END;
