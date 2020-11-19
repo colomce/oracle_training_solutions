@@ -9,6 +9,8 @@ DECLARE
      v_fname VARCHAR2(15);
      v_emp_sal NUMBER(10);
      v_contribution_pf HR.employees.SALARY%TYPE;
+     c_provident_fund_percent constant real :=.12;
+     c_basic_salary_percent constant real :=.45;
 BEGIN
     /*
     :v_basic_percent := 45;
@@ -18,9 +20,9 @@ BEGIN
     SELECT first_name,  salary
     INTO   v_fname,     v_emp_sal 
     FROM  HR.employees
-    WHERE employee_id=110;
+    WHERE employee_id = 110;
 
-    v_contribution_pf := .12 * (.45 * v_emp_sal);
+    v_contribution_pf := c_provident_fund_percent * (c_basic_salary_percent * v_emp_sal);
 
     DBMS_OUTPUT.PUT_LINE('Hello ' || v_fname);
     DBMS_OUTPUT.PUT_LINE('YOUR SALARY IS: ' || v_emp_sal);
