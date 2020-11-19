@@ -1,3 +1,4 @@
+-- Practice 03 Number 05; Observation on the Skeleton  
 SELECT * FROM employee_details;
 SET SERVEROUTPUT ON
 SET VERIFY OFF
